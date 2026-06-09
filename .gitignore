@@ -21,7 +21,7 @@ mlflow.db
 
 
 # Artifacts
-artifacts/
+#artifacts/
 
 # Logs
 *.log
