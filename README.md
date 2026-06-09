@@ -1,152 +1,97 @@
 # Retail Sales Forecasting & Inventory Optimization
 
+## Live Demo
+
+https://retail-sales-forecastory-and-inventory-optimization-a3ym6efo3z.streamlit.app/
+
 ## Overview
 
-Retail Sales Forecasting & Inventory Optimization is an end-to-end machine learning project designed to predict future product demand, optimize inventory decisions, assess stockout risks, and provide explainable AI insights for retail operations.
+Retail Sales Forecasting & Inventory Optimization is an end-to-end machine learning platform designed to predict future retail demand, optimize inventory decisions, assess stockout risks, and provide explainable AI insights for business users.
 
-The project combines demand forecasting, inventory management, risk analysis, model explainability, experiment tracking, API deployment, and containerization into a single production-oriented system.
+The system combines machine learning forecasting, inventory planning, risk monitoring, experiment tracking, explainable AI, API services, and Docker-based deployment into a production-oriented analytics platform.
 
 ---
 
-## Key Features
+## Key Highlights
+
+* End-to-end retail demand forecasting pipeline
+* XGBoost and LightGBM model training
+* MLflow experiment tracking and model management
+* SHAP explainability for model transparency
+* Inventory optimization using safety stock and reorder point calculations
+* Stockout risk assessment engine
+* Scenario simulation for demand and supply chain planning
+* FastAPI backend services
+* Interactive Streamlit dashboard
+* Docker containerization for deployment
+
+---
+
+## Features
 
 ### Demand Forecasting
 
-* 28-day demand forecasting pipeline
-* Machine learning-based prediction system
-* SKU-level forecasting support
-* Forecast confidence interval estimation
+* 28-day sales forecasting
+* SKU-level demand prediction
+* Automated feature engineering
+* Forecast uncertainty estimation
 
 ### Explainable AI
 
-* SHAP-based feature attribution
-* Local feature importance analysis
-* Model transparency and interpretability
+* SHAP feature importance analysis
+* Model interpretation dashboard
+* Transparent forecasting decisions
 
 ### Inventory Optimization
 
-* Economic Order Quantity (EOQ) calculation
+* Safety Stock calculation
 * Reorder Point estimation
-* Safety Stock computation
 * Inventory planning recommendations
+* Service level optimization
 
-### Risk Assessment
+### Risk Monitoring
 
 * Stockout risk detection
-* Inventory health scoring
-* Emergency replenishment recommendations
-* Expected stockout timeline estimation
+* Inventory health assessment
+* Replenishment recommendations
 
 ### Scenario Simulation
 
-* Demand growth simulations
-* Lead time impact analysis
-* Service level optimization
-* Revenue and profit forecasting
-* Supply chain sensitivity testing
-
-### API Layer
-
-* FastAPI-based serving infrastructure
-* Forecast endpoints
-* Inventory simulation endpoints
-* Risk assessment endpoints
-* Health monitoring endpoints
+* Demand growth simulation
+* Lead time sensitivity analysis
+* Service level impact evaluation
+* Inventory planning under uncertainty
 
 ### Experiment Tracking
 
 * MLflow experiment tracking
-* Model versioning
-* Artifact management
+* Parameter logging
+* Metric logging
+* Model artifact tracking
+* Model version management
 
 ### Deployment
 
+* FastAPI backend
+* Streamlit frontend
 * Docker containerization
-* Reproducible environments
-* Production-ready packaging
+* Reproducible deployment environment
 
 ---
 
 ## Dataset
 
-This project uses retail demand data consisting of:
+The project uses retail demand forecasting data consisting of:
 
 * Calendar information
-* Historical sales records
-* Product pricing data
+* Historical sales transactions
+* Product pricing information
 
-Files:
+Files used:
 
-* `calendar.csv`
-* `sales_train_validation.csv`
-* `sell_prices.csv`
-
----
-
-## Project Architecture
-
-```text
-Retail Forecasting System
-│
-├── Data Ingestion
-├── Data Validation
-├── Feature Engineering
-├── Model Training
-├── Forecast Generation
-├── Explainability (SHAP)
-├── Inventory Optimization
-├── Risk Assessment
-├── Scenario Simulation
-├── FastAPI Services
-└── Streamlit Dashboard
-```
-
----
-
-## Project Structure
-
-```text
-.
-│   app.py
-│   requirements.txt
-│   mlflow.db
-│
-├── artifacts
-│   └── processed_features.pkl
-│
-├── data
-│   ├── calendar.csv
-│   ├── sales_train_validation.csv
-│   └── sell_prices.csv
-│
-├── docker
-│   ├── dockerfile
-│   └── .dockerignore
-│
-├── mlruns
-│
-├── models
-│   ├── lightgbm.pkl
-│   └── xgboost.pkl
-│
-├── notebooks
-│
-└── src
-    ├── api.py
-    ├── data_ingestion.py
-    ├── data_validation.py
-    ├── explainability.py
-    ├── feature_engineering.py
-    ├── forecasting.py
-    ├── inference.py
-    ├── inventory.py
-    ├── prepare_inference_data.py
-    ├── risk.py
-    ├── training_pipeline.py
-    ├── train_ml.py
-    ├── uncertainty.py
-    └── utils.py
-```
+* calendar.csv
+* sales_train_validation.csv
+* sell_prices.csv
 
 ---
 
@@ -167,7 +112,7 @@ Retail Forecasting System
 * Pandas
 * NumPy
 
-### Model Tracking
+### Experiment Tracking
 
 * MLflow
 
@@ -182,6 +127,36 @@ Retail Forecasting System
 ### Deployment
 
 * Docker
+
+---
+
+## Project Architecture
+
+Retail Forecasting System
+
+Data Ingestion
+
+Data Validation
+
+Feature Engineering
+
+Model Training
+
+MLflow Tracking
+
+Forecast Generation
+
+SHAP Explainability
+
+Inventory Optimization
+
+Risk Assessment
+
+Scenario Simulation
+
+FastAPI Services
+
+Streamlit Dashboard
 
 ---
 
@@ -227,19 +202,19 @@ POST /simulate
 
 ## Running Locally
 
-### Install Dependencies
+Install dependencies:
 
 ```bash
 pip install -r requirements.txt
 ```
 
-### Launch Dashboard
+Launch Streamlit dashboard:
 
 ```bash
 streamlit run app.py
 ```
 
-### Launch API
+Launch FastAPI server:
 
 ```bash
 uvicorn src.api:app --reload
@@ -263,45 +238,17 @@ docker run -p 8501:8501 retailforecast2
 
 ---
 
-## Machine Learning Workflow
-
-1. Data Ingestion
-2. Data Validation
-3. Feature Engineering
-4. Model Training
-5. Forecast Generation
-6. Explainability Analysis
-7. Inventory Optimization
-8. Risk Evaluation
-9. Scenario Simulation
-10. Deployment
-
----
-
-## Future Improvements
-
-* Time-series deep learning models
-* Real-time forecasting pipeline
-* Automated retraining workflows
-* CI/CD integration
-* Cloud deployment
-* Monitoring and observability
-* Multi-store forecasting
-* Advanced supply chain optimization
-
----
-
 ## Application Screenshots
 
 ### Executive Dashboard
 
 ![Dashboard](assets/dashboard.png)
 
-### Forecast & SHAP Explainability
+### Forecast & Explainability
 
 ![Forecast](assets/forecast_shap.png)
 
-### Inventory Optimizer
+### Inventory Optimization
 
 ![Inventory](assets/inventory_optimizer.png)
 
@@ -312,11 +259,25 @@ docker run -p 8501:8501 retailforecast2
 ### Scenario Simulator
 
 ![Scenario](assets/scenario_simulator.png)
-Focused on:
 
-* Machine Learning
-* Data Science
-* MLOps
-* Forecasting Systems
-* Explainable AI
-* Production ML Engineering
+---
+
+## Future Improvements
+
+* Deep learning forecasting models
+* Automated retraining pipelines
+* CI/CD integration
+* Cloud deployment
+* Real-time monitoring
+* Multi-store forecasting
+* Advanced supply chain optimization
+
+---
+
+## Author
+
+Madhu Chandana
+
+AI & Data Science Undergraduate
+
+Focused on Machine Learning, Data Science, Forecasting Systems, MLOps, Explainable AI, and Production ML Engineering.
