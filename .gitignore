@@ -1,0 +1,53 @@
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Virtual Environments
+venv/
+.venv/
+env/
+
+# Jupyter
+.ipynb_checkpoints/
+
+# Streamlit
+.streamlit/secrets.toml
+
+# MLFlow
+mlruns/
+mlflow.db
+
+# Models
+models/*.pkl
+
+# Artifacts
+artifacts/
+
+# Logs
+*.log
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# VS Code
+.vscode/
+
+# Docker
+*.tar
+
+# Large datasets
+data/*.csv
+
+# Environment Variables
+.env
+
+# Build files
+dist/
+build/
+
+# Temporary
+tmp/
+temp/
