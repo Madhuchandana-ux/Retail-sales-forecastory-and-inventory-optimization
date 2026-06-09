@@ -19,8 +19,6 @@ env/
 mlruns/
 mlflow.db
 
-# Models
-models/*.pkl
 
 # Artifacts
 artifacts/
