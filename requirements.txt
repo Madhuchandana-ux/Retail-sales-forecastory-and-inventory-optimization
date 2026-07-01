@@ -1,18 +1,29 @@
-pandas
-numpy
-scikit-learn
-xgboost
-lightgbm
-mlflow
-fastapi
-uvicorn
-streamlit
-plotly
-shap
-joblib
-pyarrow
-scipy
-statsforecast
-hierarchicalforecast
-pytorch-forecasting
-pytorch-lightning
+# Core Data Science Stack
+pandas>=1.5.0
+numpy>=1.23.0
+scipy>=1.9.0
+
+# Machine Learning
+scikit-learn>=1.1.0
+xgboost>=1.7.0
+lightgbm>=3.3.0
+shap>=0.41.0
+
+# Time Series Forecasting
+statsforecast>=1.0.0
+hierarchicalforecast>=0.3.0
+pytorch-forecasting>=0.10.0
+pytorch-lightning>=1.8.0
+
+# Web Framework & Frontend
+fastapi>=0.95.0
+uvicorn>=0.21.0
+streamlit>=1.20.0
+
+# Data Processing & Utilities
+joblib>=1.2.0
+pyarrow>=11.0.0
+plotly>=5.13.0
+
+# Experiment Tracking & MLOps
+mlflow>=2.0.0
